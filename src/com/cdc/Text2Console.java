@@ -14,8 +14,9 @@ public class Text2Console {
         BufferedWriter bufferedWriter = null;
         try {
 //            bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("原件.txt"), "utf-8"));
-            bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("原件no-utf8.txt"), "utf-8"));
-            bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out, "utf-8"));
+            bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("原件no-utf8.txt"), "GBK"));
+//            bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out, "utf-8"));
+            bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out, "GBK"));
             String str;
             while ((str = bufferedReader.readLine()) != null) {
                 bufferedWriter.write(str);
